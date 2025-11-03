@@ -262,7 +262,7 @@ foreign key (EmployeeID) references Employees(EmployeeID));
 <img width="1188" height="279" alt="image" src="https://github.com/user-attachments/assets/5c84d6cc-291b-48d8-bcf8-923832af193d" />
 
 ## Grade
-<img width="1373" height="75" alt="image" src="https://github.com/user-attachments/assets/0cdf878b-7e74-4fc7-a2ec-602bc1a185b7" />
+<img width="1917" height="891" alt="image" src="https://github.com/user-attachments/assets/fbbc3deb-4a62-4f9a-ae31-e0d0a8037708" />
 
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
