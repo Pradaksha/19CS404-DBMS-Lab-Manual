@@ -210,7 +210,8 @@ WHERE
 <img width="1240" height="444" alt="image" src="https://github.com/user-attachments/assets/7d4bbd10-e0a4-4c2f-9031-2a1cb80d8139" />
 
 ## Grade
-<img width="1370" height="67" alt="image" src="https://github.com/user-attachments/assets/eb4f358a-1226-4fb7-b8dc-a0dc4b5ffe5e" />
+<img width="1876" height="923" alt="image" src="https://github.com/user-attachments/assets/1e6d0db5-0c9f-47d4-80c4-4e20d9fef38f" />
+
 
 
 ## RESULT
