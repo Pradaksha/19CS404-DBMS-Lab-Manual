@@ -105,161 +105,172 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
-<img width="1202" height="240" alt="image" src="https://github.com/user-attachments/assets/ba357bff-84e3-4762-9489-8a31464e5470" />
+<img width="1329" height="374" alt="image" src="https://github.com/user-attachments/assets/e9ddc7ac-538b-429a-995b-92b1cdfedaf2" />
 
 ```sql
-INSERT INTO Customers (CustomerID, Name, Address, City, ZipCode)
-VALUES(301, 'Michael Jordan', '123 Maple St', 'Chicago', 60616);
-```
-
-**Output:**
-
-<img width="1201" height="232" alt="image" src="https://github.com/user-attachments/assets/eba22ecd-0fc0-4d96-89ec-fda3a6084fde" />
-
-**Question 2**
----
-<img width="933" height="259" alt="image" src="https://github.com/user-attachments/assets/1f99ac8c-46e5-4d7f-a14b-75b204704fab" />
-
-```sql
-ALTER TABLE customer 
-RENAME city to location;
-
-```
-
-**Output:**
-
-<img width="1179" height="330" alt="image" src="https://github.com/user-attachments/assets/ba9efb0e-42cd-4611-b232-fcc7aabb020f" />
-
-**Question 3**
----
-<img width="1207" height="66" alt="image" src="https://github.com/user-attachments/assets/9cc2d73e-6bc5-491b-bff8-ea6ca14ac682" />
-
-```sql
-ALTER TABLE Companies RENAME name to first_name;
-ALTER TABLE Companies ADD column mobilenumber number;
-alter table Companies add column DOB Date;
-alter table Companies add column State varchar(30);
-```
-
-**Output:**
-
-<img width="1220" height="422" alt="image" src="https://github.com/user-attachments/assets/bdb3f246-1a66-4a43-968b-4aa3b3bb4ebf" />
-
-**Question 4**
----
-<img width="563" height="168" alt="image" src="https://github.com/user-attachments/assets/6c091a3a-955c-43f4-a177-9424aba292c8" />
-
-```sql
-CREATE TABLE Reviews(
-    ReviewID INTEGER,
-    ProductID INTEGER,
-    Rating REAL,
-    ReviewText TEXT
+CREATE TABLE Employees(
+EmployeeID PRIMARY KEY,
+FirstName NOT NULL,
+LastName NOT NULL,
+Email UNIQUE,
+Salary DECIMAL CHECK(Salary > 0 ),
+DepartmentID INTEGER,
+FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
 );
 ```
 
 **Output:**
+<img width="1747" height="429" alt="image" src="https://github.com/user-attachments/assets/058bbd12-d34b-41d6-b01a-99f8fab01908" />
 
-<img width="1192" height="399" alt="image" src="https://github.com/user-attachments/assets/775c351f-f696-47be-9f1d-a7fab1bcb368" />
+
+**Question 2**
+---
+<img width="1266" height="327" alt="image" src="https://github.com/user-attachments/assets/48181595-a884-44e0-9b98-1fc7ee37c766" />
+
+```sql
+ALTER TABLE Student_details
+ADD Date_of_birth Date;
+
+```
+
+**Output:**
+<img width="1629" height="401" alt="image" src="https://github.com/user-attachments/assets/bce12997-1b25-4529-a118-40df09a90428" />
+
+
+
+**Question 3**
+---
+<img width="1019" height="373" alt="image" src="https://github.com/user-attachments/assets/086e7677-61b0-4891-85fa-78ac839970c4" />
+
+
+```sql
+CREATE TABLE Events(
+EventID INTEGER,
+EventName TEXT,
+EventDate DATE);
+```
+
+**Output:**
+<img width="1309" height="293" alt="image" src="https://github.com/user-attachments/assets/e3085658-9780-4a67-974f-ffed53f810a8" />
+
+
+**Question 4**
+---
+<img width="892" height="247" alt="image" src="https://github.com/user-attachments/assets/fb865893-a909-44f7-8293-54417e874e03" />
+
+
+```sql
+CREATE TABLE Invoices(
+InvoiceID INTEGER PRIMARY KEY,
+InvoiceDate DATE,
+DueDate DATE CHECK(DueDate > InvoiceDate),
+Amount REAL CHECK(Amount > 0)
+);
+```
+
+**Output:**
+<img width="1068" height="230" alt="image" src="https://github.com/user-attachments/assets/c0526fd9-e1c8-40e7-96f9-17d8dba87fa6" />
+
+
 
 **Question 5**
 ---
-<img width="923" height="248" alt="image" src="https://github.com/user-attachments/assets/7752760c-a198-4433-a25e-d5b873c80d35" />
+<img width="798" height="164" alt="image" src="https://github.com/user-attachments/assets/2bccbacf-18a3-40db-a676-20e6c08b60fc" />
 
 ```sql
-CREATE TABLE item (
-    item_id TEXT primary key,
-    item_desc TEXT NOT NULL,
-    rate INTEGER NOT NULL,
-    icom_id TEXT CHECK (length(icom_id)=4),
-    FOREIGN KEY (icom_id) REFERENCES company(com_id)  
-    on update set null  on delete  set null);
+INSERT INTO Student_details (RollNo, Name, Gender, Subject, MARKS)
+VALUES (201, 'David Lee', 'M', 'Physics', 92)
 ```
 
 **Output:**
+<img width="1288" height="202" alt="image" src="https://github.com/user-attachments/assets/53b5c4fd-2527-40d9-8f2d-8eba88b229e1" />
 
-<img width="1190" height="350" alt="image" src="https://github.com/user-attachments/assets/f29b1303-39bf-44e2-aa21-bea9105be39a" />
+
 
 **Question 6**
 ---
-<img width="987" height="201" alt="image" src="https://github.com/user-attachments/assets/d81fa7a6-e4f8-4820-9471-9aa9d1f5590e" />
+<img width="1321" height="286" alt="image" src="https://github.com/user-attachments/assets/a054ce0e-5904-46f1-97ff-2876fd386e7f" />
+
 
 ```sql
-CREATE TABLE contacts(
-    contact_id INTEGER primary key,
-    first_name TEXT not NULL,
-    last_name TEXT not NULL,
-    email TEXT,
-    phone TEXT not NULL CHECK (length(phone)>=10)
-    );
+CREATE TABLE Bonuses(
+BonusID INTEGER PRIMARY KEY,
+EmployeeID INTEGER,
+BonusAmount REAL CHECK(BonusAmount > 0),
+BonusDate DATE,
+Reason TEXT NOT NULL,
+FOREIGN KEY (EmployeeID) REFERENCES  Employees(EmployeeID)
+);
 ```
 
 **Output:**
+<img width="1325" height="256" alt="image" src="https://github.com/user-attachments/assets/6211429a-b7b2-454e-bc35-f8b54f8e9f68" />
 
-<img width="1199" height="310" alt="image" src="https://github.com/user-attachments/assets/b374efb9-4db2-428c-b9d7-4cdc69682ff4" />
 
 **Question 7**
 ---
-<img width="468" height="101" alt="image" src="https://github.com/user-attachments/assets/24e3d9b0-8f55-42b2-89e8-c088fc6d1146" />
+<img width="916" height="424" alt="image" src="https://github.com/user-attachments/assets/2d10a8a1-ad46-4b2b-9b44-f5997c19f669" />
+
 
 ```sql
-INSERT INTO Customers(CustomerID, Name, Address, Email)
-SELECT CustomerID, Name, Address, Email
-FROM Old_customers
+ALTER TABLE Student_details
+ADD State TEXT;
 ```
 
 **Output:**
+<img width="1304" height="306" alt="image" src="https://github.com/user-attachments/assets/6bb01cb9-cf5d-4728-8e8c-e1ed78b88535" />
 
-<img width="1203" height="286" alt="image" src="https://github.com/user-attachments/assets/7eaf857f-5af4-4ce8-95e2-4f1b77b0d8c4" />
 
 **Question 8**
 ---
-<img width="793" height="165" alt="image" src="https://github.com/user-attachments/assets/39793172-0d78-488d-9a5e-923577296074" />
+<img width="1076" height="255" alt="image" src="https://github.com/user-attachments/assets/09cd2db1-dc51-460a-8e5a-c1f07b523da3" />
 
 ```sql
-CREATE TABLE Shipments(
-    ShipmentID INTEGER primary key,
-    ShipmentDate DATE,
-    SupplierID INTEGER,
-    OrderID INTEGER,
-    FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID),
-    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
-    );
+CREATE TABLE Orders(
+OrderID INTEGER PRIMARY KEY,
+OrderDate DATE NOT NULL,
+CustomerID INTEGER,
+FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
 ```
 
 **Output:**
+<img width="1308" height="229" alt="image" src="https://github.com/user-attachments/assets/66f8425b-10ab-42f8-8ffd-2a3d482e59f8" />
 
-<img width="1204" height="227" alt="image" src="https://github.com/user-attachments/assets/213cb587-a930-487a-9b7a-ac9c98a6712b" />
+
 
 **Question 9**
 ---
-<img width="470" height="146" alt="image" src="https://github.com/user-attachments/assets/b93af86a-1114-4d39-b4fb-eb312eb81ca6" />
+<img width="799" height="319" alt="image" src="https://github.com/user-attachments/assets/f4bf6e2e-b2d7-432f-b120-832d5b602e6d" />
+
 
 ```sql
-insert into products(Name,Category,Price,Stock)
-values("Smartphone","Electronics",800,150),("Headphones" ,"Accessories",200,300)
+INSERT INTO student_details(RollNo,Name,Gender,Subject,MARKS)
+
+SELECT RollNo,Name,Gender,Subject,MARKS FROM Archived_students;
 ```
 
 **Output:**
+<img width="1168" height="253" alt="image" src="https://github.com/user-attachments/assets/3f3fcfbc-ec12-4aa3-8487-f40dbda7a890" />
 
-  <img width="1187" height="358" alt="image" src="https://github.com/user-attachments/assets/c1ef4dff-41a0-4f62-afb3-b2d58bbf102c" />
+  
 
 **Question 10**
 ---
-<img width="1058" height="177" alt="image" src="https://github.com/user-attachments/assets/cee7f4d2-9357-41cc-9b09-4bd52dcf93cc" />
+<img width="890" height="398" alt="image" src="https://github.com/user-attachments/assets/63e41f5c-71b6-446e-b243-caa218118c92" />
+
+
 
 ```sql
-create table Attendance(
-AttendanceID int primary key,
-EmployeeID int ,
-AttendanceDate date,
-Status text check(status in('Present', 'Absent', 'Leave')),
-foreign key (EmployeeID) references Employees(EmployeeID));
+alter table Student_details
+add mobilenumber  number 
+     
 ```
 
 **Output:**
 
-<img width="1188" height="279" alt="image" src="https://github.com/user-attachments/assets/5c84d6cc-291b-48d8-bcf8-923832af193d" />
+<img width="1306" height="300" alt="image" src="https://github.com/user-attachments/assets/abb1bf7c-92a6-4071-b234-93ce8316f355" />
+
 
 ## Grade
 <img width="1917" height="891" alt="image" src="https://github.com/user-attachments/assets/fbbc3deb-4a62-4f9a-ae31-e0d0a8037708" />
