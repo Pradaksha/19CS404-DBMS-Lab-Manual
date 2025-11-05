@@ -273,7 +273,9 @@ add mobilenumber  number
 
 
 ## Grade
-<img width="1917" height="891" alt="image" src="https://github.com/user-attachments/assets/fbbc3deb-4a62-4f9a-ae31-e0d0a8037708" />
+
+<img width="1738" height="86" alt="image" src="https://github.com/user-attachments/assets/7aad7f94-4dea-4989-9d1d-f5f34066bd17" />
+
 
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
