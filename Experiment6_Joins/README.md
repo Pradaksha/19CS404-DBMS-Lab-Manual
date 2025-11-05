@@ -259,9 +259,7 @@ WHERE
 
 ### Module-5 Grade:
 
-<img width="1875" height="928" alt="image" src="https://github.com/user-attachments/assets/9cfe249b-51b2-4c7b-9e1a-94db097bf2f3" />
-
-
+<img width="1736" height="86" alt="image" src="https://github.com/user-attachments/assets/a3716270-c804-42d1-bae0-e92dc341eb66" />
 
 
 ## RESULT
