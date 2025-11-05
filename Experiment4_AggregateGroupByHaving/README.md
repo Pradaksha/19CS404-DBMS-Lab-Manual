@@ -38,149 +38,168 @@ HAVING condition;
 
 **Question 1**
 --
-<img width="997" height="522" alt="image" src="https://github.com/user-attachments/assets/c1f16dfa-0de7-48c6-b73e-97aa44fbec10" />
+<img width="740" height="428" alt="image" src="https://github.com/user-attachments/assets/34f47186-c351-42af-bc1f-4989a1cd5776" />
 
 ```sql
-SELECT DoctorID,COUNT(*) AS TotalRecords
-FROM MedicalRecords
-GROUP BY DoctorID;
+select Medication, count(Medication) as  TotalPrescriptions
+from Prescriptions
+group by Medication;
+
 ```
 
 **Output:**
 
-<img width="612" height="620" alt="image" src="https://github.com/user-attachments/assets/73001b8a-2706-4f59-a275-52be53198292" />
+<img width="851" height="567" alt="image" src="https://github.com/user-attachments/assets/df839792-3b76-4697-8ca3-3274e4bbaac6" />
+
 
 **Question 2**
 ---
-<img width="1189" height="544" alt="image" src="https://github.com/user-attachments/assets/72be10a7-0bf0-4240-8a3d-2f1c0de3c2b6" />
+<img width="828" height="388" alt="image" src="https://github.com/user-attachments/assets/ee03918b-414e-41cb-ac22-d789d0fc2b10" />
+
 
 ```sql
-SELECT Specialty,Gender, COUNT(*) AS TotalDoctors
-FROM Doctors
-GROUP BY Specialty,Gender ;
+select Specialty , count(Specialty) as TotalDocto
+from Doctors
+group by Specialty;
 ```
 
 **Output:**
 
-<img width="925" height="589" alt="image" src="https://github.com/user-attachments/assets/2e6f4808-7024-4e9b-b306-75b45ae301f6" />
+<img width="897" height="524" alt="image" src="https://github.com/user-attachments/assets/af688667-73e1-4a89-a7ac-ef8f95847458" />
+
+
 
 **Question 3**
 ---
-<img width="974" height="648" alt="image" src="https://github.com/user-attachments/assets/1841ab68-570f-428a-8b4c-3b34694a23d7" />
+<img width="533" height="466" alt="image" src="https://github.com/user-attachments/assets/b94e7a6d-5362-4cc2-a723-ec388b61366f" />
+
 
 ```sql
-SELECT DoctorID,COUNT(*) AS TotalPrescriptions
-FROM Prescriptions
-GROUP BY DoctorID;
+select InsuranceCompany ,AVG(EndDate-StartDate) as AvgCoverageDurationDays
+from Insurance
+group by InsuranceCompany;
 ```
 
 **Output:**
 
-<img width="748" height="722" alt="image" src="https://github.com/user-attachments/assets/0068823b-ed51-4b45-a961-ec6633e11dbe" />
+<img width="712" height="512" alt="image" src="https://github.com/user-attachments/assets/1d9b608c-764f-4177-8950-2529209b597a" />
+
+
 
 **Question 4**
 ---
-<img width="921" height="463" alt="image" src="https://github.com/user-attachments/assets/de7c2a2c-0003-40d2-976a-aef89b4d63aa" />
+<img width="656" height="374" alt="image" src="https://github.com/user-attachments/assets/de5b2d0b-e1fa-4d69-bd59-9a2d2d087a4f" />
 
 ```sql
-SELECT SUM(income) AS total_income
-FROM employee
-WHERE age>=40;
+select SUM(inventory) as total
+from fruits
+where unit = 'LB';
 ```
 
 **Output:**
 
-<img width="521" height="295" alt="image" src="https://github.com/user-attachments/assets/b64c78d3-41bd-4c9d-9bb1-741a1cc81054" />
+<img width="603" height="269" alt="image" src="https://github.com/user-attachments/assets/2501c713-337f-47d9-b0b6-0a772c7c9d04" />
+
+
 
 **Question 5**
 ---
-<img width="656" height="532" alt="image" src="https://github.com/user-attachments/assets/9276b2df-4fd4-4ff5-a440-2043514a01dd" />
+<img width="639" height="351" alt="image" src="https://github.com/user-attachments/assets/9d71fbb9-afb2-44dd-83f8-5586201baaa6" />
+
 
 ```sql
-SELECT name AS fruit_name, inventory AS lowest_quantity
-FROM fruits
-ORDER BY inventory ASC
-LIMIT 1;
+select purch_amt as MAXIMUM
+from orders order by
+purch_amt desc limit 1;
 ```
 
 **Output:**
 
-<img width="730" height="299" alt="image" src="https://github.com/user-attachments/assets/45f0093f-9ebb-45bb-a3ed-2333e42cef9b" />
+<img width="551" height="271" alt="image" src="https://github.com/user-attachments/assets/fe03be26-96ba-4813-8767-f82c2c0422fe" />
+
+
 
 **Question 6**
 ---
-<img width="749" height="454" alt="image" src="https://github.com/user-attachments/assets/fb7b9bf9-d816-4a74-870d-7f30bf23da1b" />
+<img width="645" height="361" alt="image" src="https://github.com/user-attachments/assets/894464bb-213c-4387-bff5-9cf0b2790208" />
+
 
 ```sql
-SELECT AVG(LENGTH(email)) AS avg_email_length
-FROM customer
+select Min(purch_amt) as MINIMUM from orders ;
 ```
 
 **Output:**
 
-<img width="462" height="302" alt="image" src="https://github.com/user-attachments/assets/32dbe5f8-a782-4458-9c62-a55562262b0f" />
+<img width="636" height="266" alt="image" src="https://github.com/user-attachments/assets/0cb12efa-fd20-4fda-9c66-daf93391ef96" />
+
+
 
 **Question 7**
 ---
-<img width="1026" height="539" alt="image" src="https://github.com/user-attachments/assets/abd2fa4f-85db-4cb2-9646-483669cd7eeb" />
+<img width="1222" height="299" alt="image" src="https://github.com/user-attachments/assets/14efe420-caa8-4fbe-87ce-77f58cd1a909" />
 
 ```sql
-SELECT MAX(price)-MIN(price) AS price_diff
-FROM fruits
+select category_id, sum(price) as Total_Cost
+from products
+group by category_id having sum(price)>50;
 ```
 
 **Output:**
 
-<img width="577" height="339" alt="image" src="https://github.com/user-attachments/assets/99061384-5429-48a0-bfa6-6b8ea140d509" />
+<img width="645" height="289" alt="image" src="https://github.com/user-attachments/assets/febe58f5-1698-4be0-92ae-8123005d8434" />
+
 
 **Question 8**
 ---
-<img width="1199" height="281" alt="image" src="https://github.com/user-attachments/assets/68d3b094-d359-49f6-a64c-7ee70d763a7c" />
+<img width="1299" height="278" alt="image" src="https://github.com/user-attachments/assets/ecf9455b-fa19-47ba-9107-a5ff8961d667" />
+
 
 ```sql
-SELECT age, SUM(income) 
-FROM employee
-GROUP BY age
-HAVING SUM(income) > 1000000;
+select (age/5)*5 as age_group  , MIN(age) from customer1
+group by (age/5)*5 having MAX(age)<25;
 ```
 
 **Output:**
 
-<img width="617" height="403" alt="image" src="https://github.com/user-attachments/assets/3c702956-8c4f-445c-b11a-8e7e33cdfa6f" />
+<img width="584" height="274" alt="image" src="https://github.com/user-attachments/assets/c7cb831a-c253-4474-8187-832ad026efb2" />
+
 
 **Question 9**
 ---
-<img width="1182" height="542" alt="image" src="https://github.com/user-attachments/assets/20640768-9d7c-44dd-86bd-9d32b80a5082" />
+<img width="1371" height="322" alt="image" src="https://github.com/user-attachments/assets/fd2eaffe-4918-453d-a877-f5dffc6a82b1" />
+
+```sql
+select occupation ,AVG(workhour)
+from employee1
+group by occupation having AVG(workhour) between 10 and 12;
+```
+
+**Output:**
+
+<img width="722" height="343" alt="image" src="https://github.com/user-attachments/assets/b824d2b5-8db0-4171-8444-60b76ee9bedd" />
+
+
+
+**Question 10**
+---
+<img width="1261" height="320" alt="image" src="https://github.com/user-attachments/assets/54b4c457-98fa-4f6e-a007-e32681cb9680" />
 
 ```sql
 SELECT occupation, SUM(workhour) 
 FROM employee1
 GROUP BY occupation
 HAVING SUM(workhour) > 20;
+
 ```
 
 **Output:**
 
-<img width="705" height="449" alt="image" src="https://github.com/user-attachments/assets/54e1caeb-6a24-49ef-a8bb-07bc107ece79" />
-
-**Question 10**
----
-<img width="1229" height="462" alt="image" src="https://github.com/user-attachments/assets/5326e28e-817c-4cf0-a3da-b2ead9d7125e" />
-
-```sql
-SELECT (age / 5) * 5 AS age_group, MIN(age)
-FROM customer1
-GROUP BY age_group
-Having MIN(age)<25;
-```
-
-**Output:**
-
-<img width="570" height="289" alt="image" src="https://github.com/user-attachments/assets/088159d0-7362-4bd8-bccc-0a7f1fed9a05" />
+<img width="782" height="372" alt="image" src="https://github.com/user-attachments/assets/3aff1dad-490d-4afd-a872-69bfb27c2459" />
 
 
 ## Grade
- <img width="1871" height="900" alt="image" src="https://github.com/user-attachments/assets/4f2b3305-38bd-4cb6-a744-9f34fd15bdfb" />
+
+<img width="1871" height="900" alt="image" src="https://github.com/user-attachments/assets/4f2b3305-38bd-4cb6-a744-9f34fd15bdfb" />
 
 
 
