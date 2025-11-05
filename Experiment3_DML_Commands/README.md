@@ -73,6 +73,7 @@ where ((sell_price - cost_price)/sell_price) < 0.30;
 ```
 
 **Output:**
+
 <img width="1659" height="367" alt="image" src="https://github.com/user-attachments/assets/7ec0f975-a32a-4b1c-8c31-1387910228af" />
 
 
@@ -122,6 +123,7 @@ where product_id IN(SELECT product_id FROM PRODUCTS WHERE supplier_id = 4);
 ```
 
 **Output:**
+
 <img width="1259" height="282" alt="image" src="https://github.com/user-attachments/assets/4954c119-988e-43ad-b2fa-ab34c8a74b33" />
 
 
@@ -136,6 +138,7 @@ where WORKING_AREA = 'New York';
 ```
 
 **Output:**
+
 <img width="1782" height="497" alt="image" src="https://github.com/user-attachments/assets/c00f7a6a-2b0d-47c0-9fb9-f9acacde7bc6" />
 
 
@@ -151,6 +154,7 @@ where agent_code in ('A003','A008');
 ```
 
 **Output:**
+
 <img width="728" height="667" alt="image" src="https://github.com/user-attachments/assets/29e08aba-8519-4afb-9774-495fc1f51062" />
 
 
@@ -166,6 +170,7 @@ and outstanding_amt >5000;
 ```
 
 **Output:**
+
 <img width="1783" height="398" alt="image" src="https://github.com/user-attachments/assets/900b4aa2-bb31-4f80-a61d-8ca1dff0045d" />
 
 
@@ -180,6 +185,7 @@ where doctor_id between 2 and 4;
 ```
 
 **Output:**
+
 <img width="871" height="537" alt="image" src="https://github.com/user-attachments/assets/3d24973c-c973-44ed-89dd-3e6064134890" />
 
 
@@ -199,6 +205,7 @@ where CUST_COUNTRY NOT IN ('India','USA');
 
 
 ## Grade
+
 <img width="1912" height="873" alt="image" src="https://github.com/user-attachments/assets/ed302df5-5411-4f94-bb28-44f075c9d863" />
 
 
