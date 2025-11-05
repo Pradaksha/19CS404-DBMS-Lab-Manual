@@ -47,147 +47,156 @@ SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
 --
-<img width="1032" height="287" alt="image" src="https://github.com/user-attachments/assets/8df36e91-1bc4-4c7c-88f8-600e5a094784" />
+<img width="803" height="216" alt="image" src="https://github.com/user-attachments/assets/9e17068d-bf2e-4efb-a49f-e23c36412a9a" />
 
 ```sql
-UPDATE sales
-SET sell_price = sell_price * 1.05
-WHERE product_id = 15
-  AND sale_date = '2023-01-31';
+update suppliers
+set supplier_name = 'A1 Suppliers' 
+where supplier_id =8 ;
 ```
 
 **Output:**
 
-<img width="1193" height="453" alt="image" src="https://github.com/user-attachments/assets/ea78ca60-edb1-437d-b74f-7c7fb4ca4a19" />
+<img width="1616" height="334" alt="image" src="https://github.com/user-attachments/assets/cbb2b093-a3d4-4210-bcdc-44401da314af" />
+
 
 **Question 2**
 ---
-<img width="1050" height="544" alt="image" src="https://github.com/user-attachments/assets/bd91a755-a383-47c2-89ee-d0f71f4cdb7b" />
+<img width="1100" height="520" alt="image" src="https://github.com/user-attachments/assets/9c0c1414-7b3e-4441-9b4a-55f377c1b548" />
+
 
 ```sql
-UPDATE products
-SET sell_price = ROUND(sell_price * 1.10, 2)
-WHERE supplier_id = 6; 
+update Products
+set sell_price = cast(cost_price * 1.35 as int)
+where ((sell_price - cost_price)/sell_price) < 0.30;
 
 ```
 
 **Output:**
+<img width="1659" height="367" alt="image" src="https://github.com/user-attachments/assets/7ec0f975-a32a-4b1c-8c31-1387910228af" />
 
-<img width="1217" height="525" alt="image" src="https://github.com/user-attachments/assets/5d5bb903-9bed-4d4f-8e3b-aff638700acb" />
+
 
 **Question 3**
 ---
-<img width="1250" height="940" alt="image" src="https://github.com/user-attachments/assets/5ed3e33f-7165-4f5d-ae20-e48bfe40b756" />
+<img width="876" height="307" alt="image" src="https://github.com/user-attachments/assets/7123befa-2b98-4bee-87d4-0a557986b79d" />
 
 ```sql
-UPDATE employees
-SET salary = ROUND(CASE
-WHEN department_id = 40 THEN salary * 1.25
-WHEN department_id = 90 THEN salary * 1.15
-WHEN department_id = 110 THEN salary * 1.10
-ELSE salary
-END, 0);
+update products
+set reorder_lvl = 20
+where quantity < 10
+and category = 'Snacks';
 ```
 
 **Output:**
 
-<img width="1190" height="457" alt="image" src="https://github.com/user-attachments/assets/d2e929d1-cc11-423c-b465-8d9cb2612351" />
+<img width="1509" height="406" alt="image" src="https://github.com/user-attachments/assets/642610b8-b326-4580-acb6-5d1f42d9f922" />
+
 
 **Question 4**
 ---
-<img width="1048" height="333" alt="image" src="https://github.com/user-attachments/assets/85715249-2a0c-4985-ab29-74270049143e" />
+<img width="679" height="185" alt="image" src="https://github.com/user-attachments/assets/2d7d023a-ed72-4df3-b8f9-01bb31da3457" />
 
 ```sql
-update suppliers 
-set supplier_name ='A1 Suppliers'
-where supplier_id=8;
+update sales
+set sell_price = sell_price * 1.05
+where product_id = 15
+and sale_date =  '2023-01-31';`sql
+
 ```
 
-**Output:**
+**output:**
 
-<img width="1206" height="403" alt="image" src="https://github.com/user-attachments/assets/21101c5d-c398-43f2-99f4-62b48dd6b225" />
+<img width="1244" height="336" alt="image" src="https://github.com/user-attachments/assets/19364fb6-064a-4a9a-b21e-eafa1ea598af" />
+
 
 **Question 5**
 ---
-<img width="1169" height="573" alt="image" src="https://github.com/user-attachments/assets/ece32ff1-3c1a-4ecc-93fd-4e84fe3356a6" />
+<img width="852" height="524" alt="image" src="https://github.com/user-attachments/assets/da0b4cf9-8190-4516-88c2-e9e1516a5ffe" />
+
 
 ```sql
-UPDATE products
-SET reorder_lvl = reorder_lvl * 0.70
-WHERE cost_price > 50
-  AND quantity < 100;
+update sales
+set sell_price = sell_price + 3
+where product_id IN(SELECT product_id FROM PRODUCTS WHERE supplier_id = 4);
 ```
 
 **Output:**
+<img width="1259" height="282" alt="image" src="https://github.com/user-attachments/assets/4954c119-988e-43ad-b2fa-ab34c8a74b33" />
 
-<img width="1185" height="443" alt="image" src="https://github.com/user-attachments/assets/3ce7f997-fe12-4cd8-8e77-73e1a66c0a1b" />
 
 **Question 6**
 ---
-<img width="822" height="479" alt="image" src="https://github.com/user-attachments/assets/d50d6f79-1f27-4f4e-b349-4825b7bb88f6" />
+<img width="1191" height="383" alt="image" src="https://github.com/user-attachments/assets/c9c1de80-b8f9-406d-9955-0fc52cbe77d1" />
+
 
 ```sql
-DELETE FROM doctors
-WHERE doctor_id BETWEEN 2 AND 4;
+delete from customer
+where WORKING_AREA = 'New York';
 ```
 
 **Output:**
+<img width="1782" height="497" alt="image" src="https://github.com/user-attachments/assets/c00f7a6a-2b0d-47c0-9fb9-f9acacde7bc6" />
 
-<img width="1198" height="792" alt="image" src="https://github.com/user-attachments/assets/b3968838-baa4-48de-9376-7efffb8b3707" />
+
 
 **Question 7**
 ---
-<img width="1215" height="476" alt="image" src="https://github.com/user-attachments/assets/ba3acfac-c254-4346-82ce-7517c82cd66c" />
+<img width="1206" height="603" alt="image" src="https://github.com/user-attachments/assets/4e69e773-ce73-4455-9a5b-878fe2445b8e" />
+
 
 ```sql
 delete from customer
-where  CUST_COUNTRY not in ( 'India', 'USA');
+where agent_code in ('A003','A008');
 ```
 
 **Output:**
+<img width="728" height="667" alt="image" src="https://github.com/user-attachments/assets/29e08aba-8519-4afb-9774-495fc1f51062" />
 
-<img width="1209" height="555" alt="image" src="https://github.com/user-attachments/assets/3830c607-26cd-4be1-b7da-876e1f69df31" />
 
 **Question 8**
 ---
-<img width="1223" height="279" alt="image" src="https://github.com/user-attachments/assets/8dcb7e24-8e3c-4b8c-bf7c-16d4eb8e14c4" />
+<img width="1459" height="428" alt="image" src="https://github.com/user-attachments/assets/a9fc21a2-dff1-41dd-8de0-59ac654bf70d" />
+
 
 ```sql
-delete from customer 
-where OPENING_AMT between 4000 and 6000;
+delete from customer
+where cust_city <>  'New York' 
+and outstanding_amt >5000;
 ```
 
 **Output:**
+<img width="1783" height="398" alt="image" src="https://github.com/user-attachments/assets/900b4aa2-bb31-4f80-a61d-8ca1dff0045d" />
 
-<img width="1184" height="612" alt="image" src="https://github.com/user-attachments/assets/f1793811-8551-4cd3-bf11-f0748caac85c" />
 
 **Question 9**
 ---
-<img width="1212" height="306" alt="image" src="https://github.com/user-attachments/assets/4a61b39d-3c41-4ca7-8a14-d3ff16d80791" />
+<img width="1272" height="566" alt="image" src="https://github.com/user-attachments/assets/c2bc976e-3df3-4311-96aa-cd490cb053ed" />
+
 
 ```sql
-delete from customer
-where (grade>2 and payment_amt<(select avg(payment_amt)
-from customer))
-or outstanding_amt>8000;
+delete from Doctors
+where doctor_id between 2 and 4;
 ```
 
 **Output:**
+<img width="871" height="537" alt="image" src="https://github.com/user-attachments/assets/3d24973c-c973-44ed-89dd-3e6064134890" />
 
-<img width="1183" height="659" alt="image" src="https://github.com/user-attachments/assets/76daa8f9-f73f-4d8f-8124-af3b40bce3c5" />
+
 
 **Question 10**
 ---
-<img width="1207" height="301" alt="image" src="https://github.com/user-attachments/assets/85360bfc-eccb-4a75-8348-d0b1fad0dfa3" />
+<img width="1511" height="465" alt="image" src="https://github.com/user-attachments/assets/96dca5fc-b969-413b-8d51-98c4100695a5" />
 
 ```sql
-delete from customer
-where GRADE >=2;
+delete from customer 
+where CUST_COUNTRY NOT IN ('India','USA');
 ```
 
 **Output:**
 
-<img width="693" height="534" alt="image" src="https://github.com/user-attachments/assets/4bc3fa7c-8139-429a-b9cb-b883857a54b7" />
+<img width="1774" height="375" alt="image" src="https://github.com/user-attachments/assets/205074ca-5b1c-4d81-ab9d-0f40bbd9ab75" />
+
 
 ## Grade
 <img width="1912" height="873" alt="image" src="https://github.com/user-attachments/assets/ed302df5-5411-4f94-bb28-44f075c9d863" />
