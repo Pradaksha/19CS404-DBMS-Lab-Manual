@@ -206,7 +206,7 @@ where CUST_COUNTRY NOT IN ('India','USA');
 
 ## Grade
 
-<img width="1912" height="873" alt="image" src="https://github.com/user-attachments/assets/ed302df5-5411-4f94-bb28-44f075c9d863" />
+<img width="1733" height="76" alt="image" src="https://github.com/user-attachments/assets/3fb1e453-7f8a-434d-92f6-a9f2875bfc26" />
 
 
 
