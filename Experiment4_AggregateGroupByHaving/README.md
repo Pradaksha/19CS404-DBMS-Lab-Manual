@@ -199,7 +199,8 @@ HAVING SUM(workhour) > 20;
 
 ## Grade
 
-<img width="1871" height="900" alt="image" src="https://github.com/user-attachments/assets/4f2b3305-38bd-4cb6-a744-9f34fd15bdfb" />
+<img width="1693" height="78" alt="image" src="https://github.com/user-attachments/assets/a2b6ccf1-0115-4a7c-aa83-d7616e99beed" />
+
 
 
 
